@@ -1,4 +1,7 @@
 *~
 *.lock
+!flake.lock
 .stack-work
 score.json
+dist-*
+.direnv/
