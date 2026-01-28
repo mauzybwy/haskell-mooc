@@ -1,0 +1,60 @@
+name: tests
+version: 0.0.1
+build-type: Simple
+cabal-version: >= 1.10
+
+library
+  build-depends: QuickCheck >= 2.14.3
+               , hspec >= 2.9.7
+               , base >= 4.16.4.0
+               , containers >= 0.6.5.1
+               , array >= 0.5.4.0
+               , transformers >= 0.5.6.2
+               , template-haskell >= 2.18.0.0
+               , th-abstraction >= 0.4.5.0
+               , generic-random >= 1.5.0.1
+               , JuicyPixels >= 3.3.7
+               , HTTP >= 4000.4.1
+               , http-types >= 0.12.3
+               , text >= 1.2.5.0
+               , bytestring >= 0.11.4.0
+               , wai >= 3.2.3
+               , warp >= 3.3.23
+               , sqlite-simple >= 0.4.18.2
+               , parallel >= 3.2.2.0
+  other-modules:
+        -- MOOC modules
+        Mooc.Todo
+        Mooc.Th
+        Mooc.LimitedPrelude
+        Mooc.VeryLimitedPrelude
+
+        -- Exercise modules
+        Set1
+        -- Set2a
+        -- Set2b
+        -- Set3a
+        -- Set3b
+        -- Set4a
+        -- Set4b
+        -- Set5a
+        -- Set5b
+        -- Set6
+        -- Set7
+        -- Set8
+        -- Set9a
+        -- Set9b
+        -- Set10a
+        -- Set10b
+        -- Set11a
+        -- Set11b
+        -- Set12
+        -- Set13a
+        -- Set13b
+        -- Set14a
+        -- Set14b
+        -- Set15
+        -- Set16a
+        -- Set16b
+
+  default-language: Haskell2010

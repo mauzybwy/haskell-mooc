@@ -1,0 +1,29 @@
+version: "3"
+
+# ==================================================================================================
+# Environment
+# ==================================================================================================
+
+env:
+  IEX_COOKIE: streamline_cookie
+
+# ==================================================================================================
+# Tasks
+# ==================================================================================================
+
+tasks:
+  build:
+    cmd: cabal build
+
+  watch:
+    cmd: ghcid --command='cabal repl'
+
+  test:
+    cmd: cabal test
+
+  format:
+    cmd: ormolu --mode inplace $(find src -name '*.hs')
+
+  other-modules:
+    cmds:
+      - echo "    other-modules:" && find . -name '*.hs' ! -name 'Main.hs' -exec basename -s .hs {} \; | sort | sed 's/^/        /' 
